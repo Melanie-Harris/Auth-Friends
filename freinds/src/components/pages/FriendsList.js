@@ -18,6 +18,10 @@ export default function FriendsList(props) {
             console.log("couldnt reach server")
         })
     });
+    const addFriendsHandler= ()=>{
+        props.history.push('/AddFriends')
+    }
+
     return (
         <div>
             FriendsList
@@ -28,7 +32,7 @@ export default function FriendsList(props) {
                  <div>{friend.email}</div></div></div>)
                  
            })} 
-
+            <button onClick={addFriendsHandler}> Add Friends</button>
             <Logout 
             history={props.history}/>
         </div>
